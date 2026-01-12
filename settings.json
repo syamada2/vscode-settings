@@ -17,32 +17,14 @@
     // == Theme ==========================================================================
     "workbench.colorTheme": "One Dark Pro Darker",
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorCustomizations": {
-        "[One Dark Pro Darker]": {
-            "editor.background": "#1E1E1E",
-            "sideBar.background": "#1E1E1E",
-            "titleBar.activeBackground": "#1E1E1E",
-            "titleBar.inactiveBackground": "#1E1E1E",
-            "activityBar.background": "#1E1E1E",
-            "editorGroupHeader.tabsBackground": "#1E1E1E",
-            "tab.activeBackground": "#1E1E1E",
-            "tab.inactiveBackground": "#1E1E1E",
-            "terminal.background": "#1E1E1E",
-            "statusBar.background": "#1E1E1E"
-        }
-    },
     // == Tree ===========================================================================
     "workbench.tree.renderIndentGuides": "onHover",
     "workbench.tree.indent": 8,
+    // == Panel ==========================================================================
+    "workbench.panel.defaultLocation": "right",
     // == Others =========================================================================
     "workbench.tips.enabled": false,
     "workbench.startupEditor": "none",
-    "workbench.editor.customLabels.patterns": {
-        "src/pages/**": "/${dirname}.${extname}"
-    },
-    "workbench.editorAssociations": {
-        "*.html": "default"
-    },
     "workbench.layoutControl.enabled": false,
     "workbench.tree.enableStickyScroll": true,
 
@@ -52,22 +34,14 @@
     "editor.fontFamily": "PlemolJP Console NF",
     "editor.fontSize": 12,
     "editor.lineHeight": 2.3,
-    "editor.fontLigatures": false,
     "editor.scrollbar.verticalScrollbarSize": 12,
     "editor.scrollbar.horizontalScrollbarSize": 10,
-    "editor.stickyScroll.enabled": true,
     "editor.minimap.enabled": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.cursorSurroundingLines": 5,
-    "editor.tabCompletion": "on",
     "editor.smoothScrolling": true,
     "editor.quickSuggestionsDelay": 400,
-    "editor.stickyScroll.defaultModel": "foldingProviderModel",
-    "editor.cursorBlinking": "blink",
     "editor.linkedEditing": true,
-    "prettier.tabWidth": 4,
-    "workbench.quickOpen.closeOnFocusLost": false,
-    "workbench.quickOpen.preserveInput": true,
+    "editor.inlineSuggest.enabled": false,
 
     // ===================================================================================
     // ==                                   Explorer                                    ==
@@ -81,15 +55,8 @@
     // ==                                    Files                                      ==
     // ===================================================================================
     "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": true,
     "files.insertFinalNewline": true,
-    "files.eol": "\r\n",
-    "files.watcherExclude": {
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/node_modules/**": true,
-        "**/.hg/store/**": true
-    },
+    "files.trimFinalNewlines": true,
     "files.associations": {
         "*.tsx": "typescriptreact"
     },
@@ -97,41 +64,29 @@
     // ===================================================================================
     // ==                                    Search                                     ==
     // ===================================================================================
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true,
-        "**/*.code-search": true
-    },
 
     // ===================================================================================
     // ==                                   Terminal                                    ==
     // ===================================================================================
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
-    "terminal.integrated.stickyScroll.enabled": true,
 
     // ===================================================================================
     // ==                                     Git                                       ==
     // ===================================================================================
-    "git.openRepositoryInParentFolders": "always",
-    "git.autofetch": false,
-    "git.autoRepositoryDetection": true,
-    "git.autorefresh": true,
 
     // ===================================================================================
     // ==                                    Debug                                      ==
     // ===================================================================================
-    "debug.inlineValues": "on",
     "debug.toolBarLocation": "docked",
 
     // ===================================================================================
     // ==                                  Languages                                    ==
     // ===================================================================================
     // == Python =========================================================================
+    "python.analysis.typeCheckingMode": "standard",
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.tabSize": 4
     },
-    "python.analysis.typeCheckingMode": "standard",
     // == TypeScript =====================================================================
     "typescript.updateImportsOnFileMove.enabled": "always",
     "[typescriptreact]": {
@@ -152,17 +107,12 @@
         "prettier.tabWidth": 2
     },
     // == Markdown =======================================================================
-    "[markdown]": {
-        "editor.wordWrap": "off",
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
-        "editor.snippetSuggestions": "top",
-        "editor.quickSuggestions": {
-            "strings": true
-        }
-    },
     "markdown.preview.scrollEditorWithPreview": false,
     "markdown.preview.scrollPreviewWithEditor": false,
     "markdown.preview.markEditorSelection": false,
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
     // == Css ============================================================================
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
@@ -181,16 +131,17 @@
     "[prisma]": {
         "editor.defaultFormatter": "Prisma.prisma"
     },
-    // == Snippets ========================================================================
-    "[snippets]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+    // == Json with comments ==============================================================
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 4,
+        "prettier.tabWidth": 4
     },
 
     // ===================================================================================
     // ==                                  Extensions                                   ==
     // ===================================================================================
     // == Core ===========================================================================
-    "extensions.autoUpdate": true,
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
@@ -199,10 +150,10 @@
     "oneDarkPro.bold": false,
     "oneDarkPro.italic": false,
     // == Material Icon ==================================================================
-    "material-icon-theme.activeIconPack": "nest",
     // == VS Icons =======================================================================
     "vsicons.dontShowNewVersionMessage": true,
     // == Spell Check ====================================================================
+    // == Claude Code ====================================================================
     "cSpell.enabled": true,
     "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"],
     "cSpell.customDictionaries": {
@@ -212,16 +163,16 @@
             "scope": "user"
         }
     },
-    // == Copy Path (Unix Style) =========================================================
-    "copy-path-unixstyle.defaultFormat": "WindowsForwardSlash",
+    // == Claude Code ====================================================================
+    "claudeCode.preferredLocation": "sidebar",
+    "claudeCode.useCtrlEnterToSend": true,
 
     // ===================================================================================
     // ==                                     Vim                                       ==
     // ===================================================================================
     // == Insert =========================================================================
     "vim.insertModeKeyBindingsNonRecursive": [
-        { "before": ["j", "j"], "after": ["<esc>"] },
-        { "before": ["j", "J"], "after": ["<esc>"] }
+        { "before": ["j", "j"], "after": ["<esc>"] }
     ],
     // == Normal =========================================================================
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -372,14 +323,9 @@
     "vim.highlightedyank.enable": true,
     "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
     "vim.searchHighlightColor": "#FEFF3F",
-    "vim.searchHighlightTextColor": "#000000",
-    "vim.statusBarColorControl": false,
+    "vim.searchHighlightTextColor": "#000000"
 
     // ===================================================================================
     // ==                                   Others                                      ==
     // ===================================================================================
-    "biome.enabled": true,
-    "terminal.integrated.tabs.location": "right",
-    "editor.inlineSuggest.enabled": false,
-
 }
