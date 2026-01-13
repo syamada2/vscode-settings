@@ -14,31 +14,27 @@
     {
         "key": "ctrl+a j",
         "command": "workbench.action.terminal.focus",
-        "when": "editorTextFocus || !inputFocus"
+        "when": "vim.active && (editorTextFocus || !inputFocus)"
     },
     {
         "key": "ctrl+a shift+j",
         "command": "workbench.action.closePanel",
-        "when": "editorTextFocus || !inputFocus || panelFocus"
+        "when": "vim.active && (editorTextFocus || !inputFocus || panelFocus)"
     },
     {
         "key": "ctrl+a e",
         "command": "workbench.action.closeSidebar",
-        "when": "editorTextFocus || !inputFocus"
+        "when": "vim.active && (editorTextFocus || !inputFocus)"
     },
     {
         "key": "ctrl+a w",
         "command": "workbench.action.quickSwitchWindow",
-        "when": "editorTextFocus || !inputFocus || panelFocus"
+        "when": "vim.active && (editorTextFocus || !inputFocus || panelFocus)"
     },
     // ===================================================================================
     // ==                                    Debug                                      ==
     // ===================================================================================
-    {
-        "key": "ctrl+a d",
-        "command": "workbench.action.debug.start",
-        "when": "(debuggersAvailable && debugState == 'inactive') && (editorTextFocus || !inputFocus)"
-    },
+
     // ===================================================================================
     // ==                                   Suggest                                     ==
     // ===================================================================================
@@ -113,17 +109,17 @@
     {
         "key": "ctrl+a backspace",
         "command": "workbench.action.closeAllEditors",
-        "when": "editorTextFocus || !inputFocus"
+        "when": "vim.active && (editorTextFocus || !inputFocus)"
     },
     {
         "key": "ctrl+a f",
         "command": "actions.find",
-        "when": "editorTextFocus"
+        "when": "vim.active && (editorTextFocus)"
     },
     {
         "key": "ctrl+a shift+f",
         "command": "workbench.action.findInFiles",
-        "when": "editorTextFocus"
+        "when": "vim.active && (editorTextFocus)"
     },
     // ===================================================================================
     // ==                                   Vim Like                                    ==
@@ -131,7 +127,7 @@
     {
         "key": "space q",
         "command": "workbench.action.closeActiveEditor",
-        "when": "!terminalFocus && !inputFocus && !searchViewletFocus && !findInputFocussed && !replaceInputFocussed && !filesExplorerFocus"
+        "when": "vim.active && (!terminalFocus && !inputFocus && !searchViewletFocus && !findInputFocussed && !replaceInputFocussed && !filesExplorerFocus)"
     },
     // ===================================================================================
     // ==                                  Extensions                                   ==
@@ -139,22 +135,22 @@
     {
         "key": "ctrl+a p",
         "command": "projectManager.listProjectsNewWindow",
-        "when": "editorTextFocus || !inputFocus || panelFocus"
+        "when": "vim.active && (editorTextFocus || !inputFocus || panelFocus)"
     },
     {
         "key": "ctrl+a shift+p",
         "command": "projectManager.saveProject",
-        "when": "editorTextFocus || !inputFocus"
+        "when": "vim.active && (editorTextFocus || !inputFocus)"
     },
     {
         "key": "ctrl+a `",
         "command": "workbench.files.action.collapseExplorerFolders",
-        "when": "editorTextFocus || !inputFocus"
+        "when": "vim.active && (editorTextFocus || !inputFocus)"
     },
     {
         "key": "ctrl+a m",
         "command": "markdown.showPreviewToSide",
-        "when": "editorTextFocus || !inputFocus"
+        "when": "vim.active && (editorTextFocus || !inputFocus)"
     },
     // ===================================================================================
     // ==                                    Deleted                                    ==
